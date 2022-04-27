@@ -1,5 +1,5 @@
 name: Bug Report
-description: Criar um bug report se o script não está funcionando.
+description: Criar um bug report se o script não está funcionando.  
 labels: [bug]
 body:
   - type: input
@@ -28,8 +28,6 @@ body:
       required: true
   - type: checkboxes
     id: is-crash
-    attributes:
-      label: Verificação
     options:
         - label: Quando você executa o script, ele crasha sem MOSTRAR um erro no F9?
           required: true
