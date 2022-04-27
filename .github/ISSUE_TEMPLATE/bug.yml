@@ -30,7 +30,6 @@ body:
     id: is-crash
     attributes:
       label: Verificação
-      description: Em caso de outros problemas, é necessário.
       options:
         - label: Quando você executa o script, ele crasha sem MOSTRAR um erro no F9?
           required: false
