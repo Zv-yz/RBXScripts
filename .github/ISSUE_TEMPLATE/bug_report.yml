@@ -1,0 +1,35 @@
+name: Bug Report
+description: "Criar um bug report se o script não está funcionando."
+labels: [bug]
+body:
+  - type: input
+    id: scriptname
+    attributes:
+      label: Qual script você está referindo?
+      description: É necessário porque precisamos saber qual script é, ou apenas você pode dizer o nome.
+      placeholder: Link ou nome
+    validations:
+      required: true
+  - type: input
+    id: exploitname
+    attributes:
+      label: Qual exploit você está usando?
+      description: É importante porque não sabemos qual executor você está usando.
+      placeholder: Synapse X
+    validations:
+      required: true
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: Qual bug acontece quando você executa script?
+      description: Se acontece algo, por favor mostre fullscreen print com F9 (Developer Tools).
+      placeholder: Print ou texto aqui!
+    validations:
+      required: true
+  - type: checkboxes
+    id: is-crash
+    attributes:
+      label: Verificação
+    options:
+        - label: Quando você executa o script, ele crasha sem MOSTRAR um erro no F9?
+          required: true

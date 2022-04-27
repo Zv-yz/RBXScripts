@@ -1,0 +1,27 @@
+name: Sugestão
+description: "Criar uma sugestão para os scripts, se precisa."
+labels: [suggestion]
+body:
+  - type: input
+    id: scriptname
+    attributes:
+      label: Qual script você está referindo?
+      description: É necessário porque precisamos saber qual script é, ou apenas você pode dizer o nome.
+      placeholder: Link ou nome
+    validations:
+      required: true
+  - type: input
+    id: linkgame
+    attributes:
+      label: Qual jogo você quer para o script?
+      description: Link do jogo ou ID da place.
+      placeholder: "https://roblox.com/games/... ou 12346789"
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Qual sugestão você quer para o script?
+      placeholder: "..."
+    validations:
+      required: true

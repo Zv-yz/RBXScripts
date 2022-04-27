@@ -1,0 +1,26 @@
+name: Patched Scirpt
+description: "Se o script não tiver funcionando (arrumado pelo developers) escolha essa opção."
+labels: [suggestion]
+body:
+  - type: input
+    id: scriptname
+    attributes:
+      label: Qual script você está referindo?
+      placeholder: Link ou nome
+    validations:
+      required: true
+  - type: input
+    id: linkgame
+    attributes:
+      label: Qual jogo você está referindo?
+      description: Link do jogo ou ID da place.
+      placeholder: "https://roblox.com/games/... ou 12346789"
+    validations:
+      required: true
+  - type: textarea
+    id: information
+    attributes:
+      label: O que acontece quando você executa o "script"?
+      placeholder: "..."
+    validations:
+      required: true
