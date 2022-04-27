@@ -1,6 +1,6 @@
 name: Patched Scirpt
-description: "Se o script não tiver funcionando (arrumado pelo developers) escolha essa opção."
-labels: [suggestion]
+description: Se o script não tiver funcionando (arrumado pelo developers) escolha essa opção.
+labels: [patched]
 body:
   - type: input
     id: scriptname

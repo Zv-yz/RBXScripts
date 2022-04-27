@@ -1,5 +1,5 @@
 name: Sugestão
-description: "Criar uma sugestão para os scripts, se precisa."
+description: Criar uma sugestão para os scripts, se precisa.
 labels: [suggestion]
 body:
   - type: input
