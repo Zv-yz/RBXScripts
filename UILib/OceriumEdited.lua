@@ -914,3 +914,4 @@ function Library.Main(Text, PARENT, keycode)
 	end
 	return InsideMain;
 end
+return Library;
