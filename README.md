@@ -19,18 +19,6 @@ Se você quiser dar sugestão ou reportar um bug/patched script [clique aqui!](h
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/RBXScripts/master/Scripts/CidadeAlta.lua'))()
 ```
 </details>
-<details>
-<summary>ContentProvider (Bypass & NÃO SEGURO)</summary>
-
-# Requisitos:
-* `hookfunction`
-* `hookmetamethod`
-
-# Script:
-```lua
-loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/RBXScripts/master/Universal/ContentProvider.lua'))()
-```
-</details>
 
 ---
 
