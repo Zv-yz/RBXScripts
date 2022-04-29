@@ -442,7 +442,7 @@ function Library.Main(Text, PARENT, keycode)
 				Toggle.TextSize = 15.000
 				Toggle.TextXAlignment = Enum.TextXAlignment.Left
 
-				local IsToggled = statement
+				local IsToggled = Statement
 				local IsPressed = false
 
 				Toggle.MouseButton1Down:Connect(function()
@@ -529,7 +529,7 @@ function Library.Main(Text, PARENT, keycode)
 				CircleCorner.CornerRadius = UDim.new(0, 5000)
 				CircleCorner.Name = 'CircleCorner'
 				CircleCorner.Parent = Circle
-				if not statement then
+				if not Statement then
 					Circle:TweenPosition(UDim2.new(0.08,0,0.5,0),'Out','Quad',0.3,true,nil)
 					TweenService:Create(Circle,TweenInfo.new(0.3),{BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
 					TweenService:Create(Circle,TweenInfo.new(0.3),{BackgroundTransparency = 0.8}):Play()
@@ -608,21 +608,21 @@ function Library.Main(Text, PARENT, keycode)
 				TextLabel.Position = UDim2.new(0.5, 0, -2, 0)
 				TextLabel.Size = UDim2.new(0, 37, 0, 11)
 				TextLabel.Font = Enum.Font.SourceSansBold
-				TextLabel.Text = defaultValue
+				TextLabel.Text = DefaultValue
 				TextLabel.TextColor3 = Color3.fromRGB(200, 200, 200)
 				TextLabel.TextSize = 13.000
 
 
-				local Sliding,Dragging = false
-				local RealValue = defaultValue
+				local Sliding, Dragging = false, false
+				local RealValue = DefaultValue
 				local value
 				local function move(Pressed)
 					Sliding = true;
 					local pos = UDim2.new(math.clamp((Pressed.Position.X - SliderBase.AbsolutePosition.X) / SliderBase.AbsoluteSize.X, 0, 1), 0, 1, 0)
 					local size = UDim2.new(math.clamp((Pressed.Position.X - SliderBase.AbsolutePosition.X) / SliderBase.AbsoluteSize.X, 0, 1), 0, 1, 0)
 					SliderProgress:TweenSize(size, 'Out', 'Sine', 0.1, true,nil);
-					RealValue = (((pos.X.Scale * max) / max) * (max - min) + min)
-					value = (precise and string.format('%.1f', tostring(RealValue))) or (math.floor(RealValue))
+					RealValue = (((pos.X.Scale * Max) / Max) * (Max - Min) + Min)
+					value = (Precise and string.format('%.1f', tostring(RealValue))) or (math.floor(RealValue))
 					TextLabel.Text = tostring(value)
 					Callback(value)
 				end
@@ -689,7 +689,7 @@ function Library.Main(Text, PARENT, keycode)
 				TextBox.Position = UDim2.new(0.290262163, 0, 0.303167433, 0)
 				TextBox.Size = UDim2.new(0, 300, 0, 35)
 				TextBox.Font = Enum.Font.SourceSansSemibold
-				TextBox.PlaceholderText = placeholder
+				TextBox.PlaceholderText = Placeholder
 				TextBox.Text = ''
 				TextBox.TextColor3 = Color3.fromRGB(200, 200, 200)
 				TextBox.TextSize = 19.000
@@ -772,7 +772,7 @@ function Library.Main(Text, PARENT, keycode)
 				Dropdown.Position = UDim2.new(0.5, 0, 0, 0)
 				Dropdown.Size = UDim2.new(0, 299, 0, 34)
 				Dropdown.Font = Enum.Font.SourceSansSemibold
-				Dropdown.PlaceholderText = placeholder
+				Dropdown.PlaceholderText = Placeholder
 				Dropdown.Text = ''
 				Dropdown.TextColor3 = Color3.fromRGB(200, 200, 200)
 				Dropdown.TextSize = 16.000
