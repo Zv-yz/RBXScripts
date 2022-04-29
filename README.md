@@ -1,5 +1,5 @@
 ### Main
-Se você quiser dar sugestão ou repotar um bug/patched script [clique aqui!](https://github.com/Zv-yz/RBXScripts/issues/new)
+Se você quiser dar sugestão ou repotar um bug/patched script [clique aqui!](https://github.com/Zv-yz/RBXScripts/issues/new/choose)
 ### Scripts
 N/A
 
