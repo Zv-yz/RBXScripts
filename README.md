@@ -31,7 +31,6 @@ loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/RBXScripts/mast
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/RBXScripts/master/Universal/ContentProvider.lua'))()
 ```
 </details>
-<details>
 
 ---
 
