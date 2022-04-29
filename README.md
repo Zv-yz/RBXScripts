@@ -1,7 +1,37 @@
 ### Main
 Se você quiser dar sugestão ou reportar um bug/patched script [clique aqui!](https://github.com/Zv-yz/RBXScripts/issues/new/choose)
 ### Scripts
-N/A
+<details>
+<summary>Cidade Alta</summary>
+
+# Requisitos:
+* `fireproximityprompt`
+
+# Funções:
+* `Auto Farm`
+* `Deletar kill logs`
+* `Deletar remotes da armas`
+* `Crashar o servidor`
+* `Kick/Ban/Unban player`
+
+# Script:
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/RBXScripts/master/Scripts/CidadeAlta.lua'))()
+```
+</details>
+<details>
+<summary>ContentProvider (Bypass & NÃO SEGURO)</summary>
+
+# Requisitos:
+* `hookfunction`
+* `hookmetamethod`
+
+# Script:
+```lua
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/RBXScripts/master/Universal/ContentProvider.lua'))()
+```
+</details>
+<details>
 
 ---
 
