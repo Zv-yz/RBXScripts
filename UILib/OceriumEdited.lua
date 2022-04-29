@@ -1,6 +1,6 @@
 --> Made by https://github.com/slf0Dev
-local TweenService = game:GetService("TweenService")
-local InputService = game:GetService("UserInputService")
+local TweenService = game:GetService('TweenService')
+local InputService = game:GetService('UserInputService')
 local ms = game.Players.LocalPlayer:GetMouse()
 local Library = {}
 local function randomString()
@@ -20,30 +20,31 @@ function Library.Main(Text, PARENT, keycode)
 			end
 		end
 	end)
-	local LibraryUI = Instance.new("ScreenGui")
-	local Topbar = Instance.new("Frame")
-	local Main = Instance.new("Frame")
-	local UICorner = Instance.new("UICorner")
-	local UICorner_2 = Instance.new("UICorner")
-	local UICorner_4 = Instance.new("UICorner")
-	local smh = Instance.new("Frame")
-	local smh_2 = Instance.new("Frame")
-	local NameLabel = Instance.new("TextLabel")
-	local ImageButton = Instance.new("ImageButton")
+	local LibraryUI = Instance.new('ScreenGui')
+	local Topbar = Instance.new('Frame')
+	local Main = Instance.new('Frame')
+	local UICorner = Instance.new('UICorner')
+	local UICorner_2 = Instance.new('UICorner')
+	local UICorner_4 = Instance.new('UICorner')
+	local smh = Instance.new('Frame')
+	local smh_2 = Instance.new('Frame')
+	local NameLabel = Instance.new('TextLabel')
+	local ImageButton = Instance.new('ImageButton')
 
+	LibraryUI.DisplayOrder = 10
 	LibraryUI.Name = randomString()
 	LibraryUI.Parent = PARENT
-	LibraryUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	LibraryUI.ResetOnSpawn = false
+	LibraryUI.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-	Topbar.Name = "OceriumUI"
+	Topbar.Name = 'OceriumUI'
 	Topbar.Parent = LibraryUI
 	Topbar.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	Topbar.BorderSizePixel = 0
 	Topbar.Position = UDim2.new(0.189116865, 0, 0.068217054, 0)
 	Topbar.Size = UDim2.new(0, 700, 0, 37)
 
-	Main.Name = "Main"
+	Main.Name = 'Main'
 	Main.Parent = Topbar
 	Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	Main.BorderSizePixel = 0
@@ -54,21 +55,21 @@ function Library.Main(Text, PARENT, keycode)
 	UICorner_2.Parent = Topbar
 	UICorner_4.Parent = ImageButton
 
-	smh.Name = "smh"
+	smh.Name = 'smh'
 	smh.Parent = Main
 	smh.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	smh.BorderSizePixel = 0
 	smh.Position = UDim2.new(0, 0, -0.0018427372, 0)
 	smh.Size = UDim2.new(1, 0, 0, 9)
 
-	smh_2.Name = "smh"
+	smh_2.Name = 'smh'
 	smh_2.Parent = Topbar
 	smh_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 	smh_2.BorderSizePixel = 0
 	smh_2.Position = UDim2.new(0, 0, 0.795454562, 0)
 	smh_2.Size = UDim2.new(1, 0, 0, 9)
 
-	NameLabel.Name = "NameLabel"
+	NameLabel.Name = 'NameLabel'
 	NameLabel.Parent = Topbar
 	NameLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 	NameLabel.BackgroundTransparency = 1.000
@@ -90,7 +91,7 @@ function Library.Main(Text, PARENT, keycode)
 	ImageButton.Position = UDim2.new(0.949999988, 0, 0, 0)
 	ImageButton.Size = UDim2.new(0, 29, 0, 29)
 	ImageButton.AutoButtonColor = false
-	ImageButton.Image = "http://www.roblox.com/asset/?id=9444423916"
+	ImageButton.Image = 'http://www.roblox.com/asset/?id=9444423916'
 	ImageButton.ScaleType = Enum.ScaleType.Fit
 
 	local IsOpened = true
@@ -99,23 +100,23 @@ function Library.Main(Text, PARENT, keycode)
 		if IsOpened then
 			IsOpened = false
 			old_position = Topbar.Position
-			Main:TweenSize(UDim2.new(0,0,0,0),"Out","Quad",0.2,true,nil)
-			smh:TweenSize(UDim2.new(0,0,0,0),"Out","Quad",0.2,true,nil)
-			smh_2:TweenSize(UDim2.new(0,0,0,0),"Out","Quad",0.2,true,nil)
-			Topbar:TweenSize(UDim2.new(0,50,0,50),"Out","Quad",0.2,true,nil)
-			Topbar:TweenPosition(UDim2.new(0.5,0,0.85,0),"Out","Quad",0.3,true,nil)
-			ImageButton:TweenPosition(UDim2.new(0,0,0,0),"Out","Quad",0.3,true,nil)
-			ImageButton:TweenSize(UDim2.new(1, 0, 1, 0),"Out","Quad",0.3,true,nil)
+			Main:TweenSize(UDim2.new(0,0,0,0),'Out','Quad',0.2,true,nil)
+			smh:TweenSize(UDim2.new(0,0,0,0),'Out','Quad',0.2,true,nil)
+			smh_2:TweenSize(UDim2.new(0,0,0,0),'Out','Quad',0.2,true,nil)
+			Topbar:TweenSize(UDim2.new(0,50,0,50),'Out','Quad',0.2,true,nil)
+			Topbar:TweenPosition(UDim2.new(0.5,0,0.85,0),'Out','Quad',0.3,true,nil)
+			ImageButton:TweenPosition(UDim2.new(0,0,0,0),'Out','Quad',0.3,true,nil)
+			ImageButton:TweenSize(UDim2.new(1, 0, 1, 0),'Out','Quad',0.3,true,nil)
 			NameLabel.Visible = false
 		else
 			IsOpened = true
-			Main:TweenSize(UDim2.new(1, 0, -1.75555551, 444),"Out","Quad",0.2,true,nil)
-			smh:TweenSize(UDim2.new(1, 0, 0, 9),"Out","Quad",0.2,true,nil)
-			smh_2:TweenSize(UDim2.new(1, 0, 0, 9),"Out","Quad",0.2,true,nil)
-			Topbar:TweenSize(UDim2.new(0, 700, 0, 37),"Out","Quad",0.2,true,nil)
-			Topbar:TweenPosition(UDim2.new(old_position.X.Scale, old_position.X.Offset, old_position.Y.Scale, old_position.Y.Offset),"Out","Quad",0.3,true,nil)
-			ImageButton:TweenPosition(UDim2.new(0.949999988, 0, 0, 0),"Out","Quad",0.3,true,nil)
-			ImageButton:TweenSize(UDim2.new(0, 29, 0, 29),"Out","Quad",0.3,true,nil)
+			Main:TweenSize(UDim2.new(1, 0, -1.75555551, 444),'Out','Quad',0.2,true,nil)
+			smh:TweenSize(UDim2.new(1, 0, 0, 9),'Out','Quad',0.2,true,nil)
+			smh_2:TweenSize(UDim2.new(1, 0, 0, 9),'Out','Quad',0.2,true,nil)
+			Topbar:TweenSize(UDim2.new(0, 700, 0, 37),'Out','Quad',0.2,true,nil)
+			Topbar:TweenPosition(UDim2.new(old_position.X.Scale, old_position.X.Offset, old_position.Y.Scale, old_position.Y.Offset),'Out','Quad',0.3,true,nil)
+			ImageButton:TweenPosition(UDim2.new(0.949999988, 0, 0, 0),'Out','Quad',0.3,true,nil)
+			ImageButton:TweenSize(UDim2.new(0, 29, 0, 29),'Out','Quad',0.3,true,nil)
 			NameLabel.Visible = true
 		end
 	end
@@ -124,7 +125,7 @@ function Library.Main(Text, PARENT, keycode)
 		Show_Hide_UI()
 	end)
 
-	game:GetService("UserInputService").InputBegan:Connect(function(key,isTyping)
+	game:GetService('UserInputService').InputBegan:Connect(function(key,isTyping)
 		if not isTyping and key.KeyCode == Enum.KeyCode[keycode] then
 			Show_Hide_UI()
 		end
@@ -140,7 +141,7 @@ function Library.Main(Text, PARENT, keycode)
 	local function update(input)
 		local delta = input.Position - dragStart
 		pcall(function()
-			Topbar:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y),"Out","Quad",0.1,true,nil)
+			Topbar:TweenPosition(UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y),'Out','Quad',0.1,true,nil)
 		end)
 	end
 	Topbar.InputBegan:Connect(function(input)
@@ -175,18 +176,18 @@ function Library.Main(Text, PARENT, keycode)
 
 	function InsideMain.Category(Text)
 
-		local UICorner = Instance.new("UICorner")
-		local FolderImage = Instance.new("ImageLabel")
-		local ImageCorner = Instance.new("UICorner")
+		local UICorner = Instance.new('UICorner')
+		local FolderImage = Instance.new('ImageLabel')
+		local ImageCorner = Instance.new('UICorner')
 
-		local Folder = Instance.new("Frame")
-		local SubFolders = Instance.new("Frame")
-		local CategoryName = Instance.new("TextLabel")
-		local List = Instance.new("ScrollingFrame")
-		local UIListLayout = Instance.new("UIListLayout")
-		local Components = Instance.new("ScrollingFrame")
+		local Folder = Instance.new('Frame')
+		local SubFolders = Instance.new('Frame')
+		local CategoryName = Instance.new('TextLabel')
+		local List = Instance.new('ScrollingFrame')
+		local UIListLayout = Instance.new('UIListLayout')
+		local Components = Instance.new('ScrollingFrame')
 
-		Folder.Name = "Folder"
+		Folder.Name = 'Folder'
 		Folder.Parent = Main
 		Folder.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 		Folder.BorderSizePixel = 0
@@ -194,7 +195,7 @@ function Library.Main(Text, PARENT, keycode)
 		Folder.Size = UDim2.new(1, 0, 1, 0)
 		Folder.Visible = true
 
-		SubFolders.Name = "SubFolders"
+		SubFolders.Name = 'SubFolders'
 		SubFolders.Parent = Folder
 		SubFolders.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 		SubFolders.BorderSizePixel = 0
@@ -202,7 +203,7 @@ function Library.Main(Text, PARENT, keycode)
 		SubFolders.Position = UDim2.new(0, 0, 0.0974878445, -7)
 		SubFolders.Size = UDim2.new(0.341428578, 0, 0.818089366, 0)
 
-		CategoryName.Name = "CategoryName"
+		CategoryName.Name = 'CategoryName'
 		CategoryName.Parent = Folder
 		CategoryName.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		CategoryName.BackgroundTransparency = 1.000
@@ -214,9 +215,9 @@ function Library.Main(Text, PARENT, keycode)
 		CategoryName.TextColor3 = Color3.fromRGB(134, 134, 134)
 		CategoryName.TextSize = 21.000
 		CategoryName.TextXAlignment = Enum.TextXAlignment.Left
-		CategoryName.Text = " " .. Text
+		CategoryName.Text = ' ' .. Text
 
-		List.Name = "List"
+		List.Name = 'List'
 		List.Parent = SubFolders
 		List.Active = true
 		List.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -224,18 +225,18 @@ function Library.Main(Text, PARENT, keycode)
 		List.BorderSizePixel = 0
 		List.Position = UDim2.new(0, 0, 0, 15)
 		List.Size = UDim2.new(0, 239, 0,295)
-		List.BottomImage = "rbxassetid://5614579544"
+		List.BottomImage = 'rbxassetid://5614579544'
 		List.CanvasSize = UDim2.new(0, 0, 0, 0)
-		List.MidImage = "rbxassetid://5614579544"
+		List.MidImage = 'rbxassetid://5614579544'
 		List.ScrollBarThickness = 4
-		List.TopImage = "rbxassetid://5614579544"
+		List.TopImage = 'rbxassetid://5614579544'
 		List.ScrollBarImageTransparency = 0.7
 		List.AutomaticCanvasSize = Enum.AutomaticSize.Y
 
 		UIListLayout.Parent = List
 		UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
 
-		Components.Name = "Components"
+		Components.Name = 'Components'
 		Components.Parent = Folder
 		Components.Active = true
 		Components.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -243,16 +244,16 @@ function Library.Main(Text, PARENT, keycode)
 		Components.BorderSizePixel = 0
 		Components.Position = UDim2.new(0.340999991, 0, 0, 0)
 		Components.Size = UDim2.new(0, 461, 0, 379)
-		Components.BottomImage = "rbxassetid://5614579544"
+		Components.BottomImage = 'rbxassetid://5614579544'
 		Components.CanvasSize = UDim2.new(0, 0, 0, 0)
-		Components.MidImage = "rbxassetid://5614579544"
+		Components.MidImage = 'rbxassetid://5614579544'
 		Components.ScrollBarThickness = 4
-		Components.TopImage = "rbxassetid://5614579544"
+		Components.TopImage = 'rbxassetid://5614579544'
 
-		local UIPageLayout = Instance.new("UIPageLayout")
+		local UIPageLayout = Instance.new('UIPageLayout')
 
 
-		UIPageLayout.Name = "Pagess"
+		UIPageLayout.Name = 'Pagess'
 		UIPageLayout.Parent = Components
 		UIPageLayout.HorizontalAlignment = Enum.HorizontalAlignment.Center
 		UIPageLayout.SortOrder = Enum.SortOrder.LayoutOrder
@@ -268,11 +269,11 @@ function Library.Main(Text, PARENT, keycode)
 		local InsideCategory = {}
 		function InsideCategory.Folder(Text)
 
-			local FolderDisplay = Instance.new("Frame")
-			local UIListLayout = Instance.new("UIListLayout")
-			local FolderButton = Instance.new("TextButton")
-			local FoldersComponents = Instance.new("ScrollingFrame")
-			local empty = Instance.new("Frame")
+			local FolderDisplay = Instance.new('Frame')
+			local UIListLayout = Instance.new('UIListLayout')
+			local FolderButton = Instance.new('TextButton')
+			local FoldersComponents = Instance.new('ScrollingFrame')
+			local empty = Instance.new('Frame')
 
 			FolderDisplay.Name = Text
 			FolderDisplay.Parent = Components
@@ -282,7 +283,7 @@ function Library.Main(Text, PARENT, keycode)
 			FolderDisplay.Size = UDim2.new(0, 461, 0, 379)
 			FolderDisplay.ClipsDescendants = true
 
-			FoldersComponents.Name = "FolderComponents"
+			FoldersComponents.Name = 'FolderComponents'
 			FoldersComponents.Parent = FolderDisplay
 			FoldersComponents.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			FoldersComponents.BackgroundTransparency = 1
@@ -295,7 +296,7 @@ function Library.Main(Text, PARENT, keycode)
 			FoldersComponents.CanvasSize = UDim2.new(0, 0, 0, 0)
 			FoldersComponents.ClipsDescendants = false
 
-			empty.Name = "empty"
+			empty.Name = 'empty'
 			empty.Parent = FoldersComponents
 			empty.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			empty.BackgroundTransparency = 1
@@ -317,7 +318,7 @@ function Library.Main(Text, PARENT, keycode)
 			FolderButton.BorderSizePixel = 0
 			FolderButton.Size = UDim2.new(0, 239, 0, 45)
 			FolderButton.Font = Enum.Font.SourceSansSemibold
-			FolderButton.Text = "      " .. Text
+			FolderButton.Text = '      ' .. Text
 			FolderButton.TextColor3 = Color3.fromRGB(200, 200, 200)
 			FolderButton.TextSize = 19.000
 			FolderButton.TextWrapped = true
@@ -336,10 +337,10 @@ function Library.Main(Text, PARENT, keycode)
 			local InsideFolder = {}
 
 			function InsideFolder.Label(Text)
-				local Label = Instance.new("TextLabel")
+				local Label = Instance.new('TextLabel')
 
 				Label.Parent = FoldersComponents
-				Label.Name = "Label"
+				Label.Name = 'Label'
 				Label.Size = UDim2.new(0,300,0,35)
 				Label.BackgroundColor3 = Color3.fromRGB(255,255,255)
 				Label.BackgroundTransparency = 1
@@ -350,13 +351,13 @@ function Library.Main(Text, PARENT, keycode)
 				Label.TextXAlignment = Enum.TextXAlignment.Left
 				return Label;
 			end
-			function InsideFolder.Button(Text,callback)
+			function InsideFolder.Button(Text, Callback)
 
-				local ButtonFrame = Instance.new("Frame")
-				local ButtonLib = Instance.new("TextButton")
-				local ButtonCorner = Instance.new("UICorner")
+				local ButtonFrame = Instance.new('Frame')
+				local ButtonLib = Instance.new('TextButton')
+				local ButtonCorner = Instance.new('UICorner')
 
-				ButtonFrame.Name = "ButtonFrame"
+				ButtonFrame.Name = 'ButtonFrame'
 				ButtonFrame.Parent = FoldersComponents
 				ButtonFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 				ButtonFrame.BackgroundTransparency = 1
@@ -364,7 +365,7 @@ function Library.Main(Text, PARENT, keycode)
 				ButtonFrame.Position = UDim2.new(0.312734097, 0, 0.334841639, 0)
 				ButtonFrame.Size = UDim2.new(0, 300, 0, 35)
 
-				ButtonLib.Name = "ButtonLib"
+				ButtonLib.Name = 'ButtonLib'
 				ButtonLib.Parent = ButtonFrame
 				ButtonLib.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				ButtonLib.BackgroundTransparency = 1
@@ -377,12 +378,12 @@ function Library.Main(Text, PARENT, keycode)
 				ButtonLib.TextSize = 15
 				ButtonLib.AutoButtonColor = false
 
-				ButtonCorner.Name = "ButtonCorner"
+				ButtonCorner.Name = 'ButtonCorner'
 				ButtonCorner.Parent = ButtonFrame
 
-				local ButtonStroke = Instance.new("UIStroke")
+				local ButtonStroke = Instance.new('UIStroke')
 				ButtonStroke.Parent = ButtonFrame
-				ButtonStroke.LineJoinMode = "Round"
+				ButtonStroke.LineJoinMode = 'Round'
 				ButtonStroke.Color = Color3.fromRGB(255,255,255)
 				ButtonStroke.Transparency = 0.95
 
@@ -413,22 +414,22 @@ function Library.Main(Text, PARENT, keycode)
 					IsPressed = false
 				end)
 				ButtonLib.MouseButton1Click:Connect(function()
-					spawn(function() callback() end)
+					spawn(function() Callback() end)
 				end)
 				return ButtonLib
 			end
 
-			function InsideFolder.Toggle(Text,callback,statement)
-				local Toggle = Instance.new("TextButton")
-				local ToggleCorner = Instance.new("UICorner")
-				local OuterBorder = Instance.new("Frame")
-				local Corner = Instance.new("UICorner")
-				local Circle = Instance.new("Frame")
-				local CircleCorner = Instance.new("UICorner")
-				local ToggleStroke = Instance.new("UIStroke")
-				local OuterBorderStroke = Instance.new("UIStroke")
+			function InsideFolder.Toggle(Text, Callback, Statement)
+				local Toggle = Instance.new('TextButton')
+				local ToggleCorner = Instance.new('UICorner')
+				local OuterBorder = Instance.new('Frame')
+				local Corner = Instance.new('UICorner')
+				local Circle = Instance.new('Frame')
+				local CircleCorner = Instance.new('UICorner')
+				local ToggleStroke = Instance.new('UIStroke')
+				local OuterBorderStroke = Instance.new('UIStroke')
 
-				Toggle.Name = "Toggle"
+				Toggle.Name = 'Toggle'
 				Toggle.Parent = FoldersComponents
 				Toggle.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 				Toggle.BorderSizePixel = 0
@@ -436,7 +437,7 @@ function Library.Main(Text, PARENT, keycode)
 				Toggle.Size = UDim2.new(0, 300, 0, 35)
 				Toggle.AutoButtonColor = false
 				Toggle.Font = Enum.Font.SourceSansBold
-				Toggle.Text = "    " .. Text
+				Toggle.Text = '    ' .. Text
 				Toggle.TextColor3 = Color3.fromRGB(200, 200, 200)
 				Toggle.TextSize = 15.000
 				Toggle.TextXAlignment = Enum.TextXAlignment.Left
@@ -456,10 +457,10 @@ function Library.Main(Text, PARENT, keycode)
 				end)
 
 				Toggle.MouseButton1Click:Connect(function()
-					spawn(function() callback(IsToggled) end)
+					spawn(function() Callback(IsToggled) end)
 					if IsToggled then
 						IsToggled = false
-						Circle:TweenPosition(UDim2.new(0.08,0,0.5,0),"Out","Quad",0.3,true,nil)
+						Circle:TweenPosition(UDim2.new(0.08,0,0.5,0),'Out','Quad',0.3,true,nil)
 						TweenService:Create(Circle,TweenInfo.new(0.3),{BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
 						TweenService:Create(Circle,TweenInfo.new(0.3),{BackgroundTransparency = 0.8}):Play()
 						TweenService:Create(OuterBorder,TweenInfo.new(0.3),{BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
@@ -471,7 +472,7 @@ function Library.Main(Text, PARENT, keycode)
 						TweenService:Create(OuterBorder,TweenInfo.new(0.3),{BackgroundTransparency = 0}):Play()
 						TweenService:Create(Circle,TweenInfo.new(0.3),{BackgroundTransparency = 0}):Play()
 						TweenService:Create(Toggle,TweenInfo.new(0.3),{TextColor3 = Color3.fromRGB(255,255,255)}):Play()
-						Circle:TweenPosition(UDim2.new(0.64,0,0.5,0),"Out","Quad",0.3,true,nil)
+						Circle:TweenPosition(UDim2.new(0.64,0,0.5,0),'Out','Quad',0.3,true,nil)
 					end
 				end)
 
@@ -488,17 +489,17 @@ function Library.Main(Text, PARENT, keycode)
 					end
 				end)
 
-				ToggleCorner.Name = "ToggleCorner"
+				ToggleCorner.Name = 'ToggleCorner'
 				ToggleCorner.Parent = Toggle
 
 				ToggleStroke.Parent = Toggle
 				ToggleStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-				ToggleStroke.LineJoinMode = "Round"
+				ToggleStroke.LineJoinMode = 'Round'
 				ToggleStroke.Color = Color3.fromRGB(255,255,255)
 				ToggleStroke.Transparency = 0.95
 
 
-				OuterBorder.Name = "OuterBorder"
+				OuterBorder.Name = 'OuterBorder'
 				OuterBorder.Parent = Toggle
 				OuterBorder.AnchorPoint = Vector2.new(0, 0.5)
 				OuterBorder.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -508,15 +509,15 @@ function Library.Main(Text, PARENT, keycode)
 				OuterBorder.Size = UDim2.new(0, 49, 0, 22)
 
 				OuterBorderStroke.Parent = OuterBorder
-				OuterBorderStroke.LineJoinMode = "Round"
+				OuterBorderStroke.LineJoinMode = 'Round'
 				OuterBorderStroke.Color = Color3.fromRGB(255,255,255)
 				OuterBorderStroke.Transparency = 0.9
 
 				Corner.CornerRadius = UDim.new(0, 5000)
-				Corner.Name = "Corner"
+				Corner.Name = 'Corner'
 				Corner.Parent = OuterBorder
 
-				Circle.Name = "Circle"
+				Circle.Name = 'Circle'
 				Circle.Parent = OuterBorder
 				Circle.AnchorPoint = Vector2.new(0, 0.5)
 				Circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -526,38 +527,38 @@ function Library.Main(Text, PARENT, keycode)
 				Circle.Size = UDim2.new(0, 14, 0, 14)
 
 				CircleCorner.CornerRadius = UDim.new(0, 5000)
-				CircleCorner.Name = "CircleCorner"
+				CircleCorner.Name = 'CircleCorner'
 				CircleCorner.Parent = Circle
 				if not statement then
-					Circle:TweenPosition(UDim2.new(0.08,0,0.5,0),"Out","Quad",0.3,true,nil)
+					Circle:TweenPosition(UDim2.new(0.08,0,0.5,0),'Out','Quad',0.3,true,nil)
 					TweenService:Create(Circle,TweenInfo.new(0.3),{BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
 					TweenService:Create(Circle,TweenInfo.new(0.3),{BackgroundTransparency = 0.8}):Play()
 					TweenService:Create(OuterBorder,TweenInfo.new(0.3),{BackgroundColor3 = Color3.fromRGB(255,255,255)}):Play()
 					TweenService:Create(OuterBorder,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 					TweenService:Create(Toggle,TweenInfo.new(0.3),{TextColor3 = Color3.fromRGB(200,200,200)}):Play()
 				else
-					spawn(function() callback(true) end)
+					spawn(function() Callback(true) end)
 					TweenService:Create(OuterBorder,TweenInfo.new(0.3),{BackgroundColor3 = Color3.fromRGB(37, 150, 255)}):Play()
 					TweenService:Create(OuterBorder,TweenInfo.new(0.3),{BackgroundTransparency = 0}):Play()
 					TweenService:Create(Circle,TweenInfo.new(0.3),{BackgroundTransparency = 0}):Play()
 					TweenService:Create(Toggle,TweenInfo.new(0.3),{TextColor3 = Color3.fromRGB(255,255,255)}):Play()
-					Circle:TweenPosition(UDim2.new(0.64,0,0.5,0),"Out","Quad",0.3,true,nil)
+					Circle:TweenPosition(UDim2.new(0.64,0,0.5,0),'Out','Quad',0.3,true,nil)
 				end
 				return Toggle;
 			end
-			function InsideFolder.Slider(Text,min,max,callback,defaultValue,precise)
+			function InsideFolder.Slider(Text, Min, Max, Callback, DefaultValue, Precise)
 
-				local Slider = Instance.new("TextLabel")
-				local SliderBase = Instance.new("Frame")
-				local UICorner = Instance.new("UICorner")
-				local SliderProgress = Instance.new("Frame")
-				local UICorner_2 = Instance.new("UICorner")
-				local TextLabel = Instance.new("TextLabel")
-				local SliderBorder = Instance.new("UIStroke")
-				local SliderCorner = Instance.new("UICorner")
+				local Slider = Instance.new('TextLabel')
+				local SliderBase = Instance.new('Frame')
+				local UICorner = Instance.new('UICorner')
+				local SliderProgress = Instance.new('Frame')
+				local UICorner_2 = Instance.new('UICorner')
+				local TextLabel = Instance.new('TextLabel')
+				local SliderBorder = Instance.new('UIStroke')
+				local SliderCorner = Instance.new('UICorner')
 				--Properties:
 
-				Slider.Name = "Slider"
+				Slider.Name = 'Slider'
 				Slider.Parent = FoldersComponents
 				Slider.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 				Slider.BackgroundTransparency = 1
@@ -568,17 +569,17 @@ function Library.Main(Text, PARENT, keycode)
 				Slider.TextColor3 = Color3.fromRGB(200, 200, 200)
 				Slider.TextSize = 15.000
 				Slider.TextXAlignment = Enum.TextXAlignment.Left
-				Slider.Text =  "    " .. Text
+				Slider.Text =  '    ' .. Text
 
 				SliderCorner.Parent = Slider
 
 				SliderBorder.Parent = Slider
 				SliderBorder.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-				SliderBorder.LineJoinMode = "Round"
+				SliderBorder.LineJoinMode = 'Round'
 				SliderBorder.Color = Color3.fromRGB(255,255,255)
 				SliderBorder.Transparency = 0.95
 
-				SliderBase.Name = "SliderBase"
+				SliderBase.Name = 'SliderBase'
 				SliderBase.Parent = Slider
 				SliderBase.AnchorPoint = Vector2.new(0, 0.5)
 				SliderBase.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -590,7 +591,7 @@ function Library.Main(Text, PARENT, keycode)
 				UICorner.CornerRadius = UDim.new(0, 9999)
 				UICorner.Parent = SliderBase
 
-				SliderProgress.Name = "SliderProgress"
+				SliderProgress.Name = 'SliderProgress'
 				SliderProgress.Parent = SliderBase
 				SliderProgress.BackgroundColor3 = Color3.fromRGB(255,255,255)
 				SliderProgress.BorderSizePixel = 0
@@ -619,11 +620,11 @@ function Library.Main(Text, PARENT, keycode)
 					Sliding = true;
 					local pos = UDim2.new(math.clamp((Pressed.Position.X - SliderBase.AbsolutePosition.X) / SliderBase.AbsoluteSize.X, 0, 1), 0, 1, 0)
 					local size = UDim2.new(math.clamp((Pressed.Position.X - SliderBase.AbsolutePosition.X) / SliderBase.AbsoluteSize.X, 0, 1), 0, 1, 0)
-					SliderProgress:TweenSize(size, "Out", "Sine", 0.1, true,nil);
+					SliderProgress:TweenSize(size, 'Out', 'Sine', 0.1, true,nil);
 					RealValue = (((pos.X.Scale * max) / max) * (max - min) + min)
-					value = (precise and string.format("%.1f", tostring(RealValue))) or (math.floor(RealValue))
+					value = (precise and string.format('%.1f', tostring(RealValue))) or (math.floor(RealValue))
 					TextLabel.Text = tostring(value)
-					callback(value)
+					Callback(value)
 				end
 
 				Slider.InputBegan:Connect(function(Pressed)
@@ -650,7 +651,7 @@ function Library.Main(Text, PARENT, keycode)
 					end
 				end)
 
-				game:GetService("UserInputService").InputChanged:Connect(function(Pressed)
+				game:GetService('UserInputService').InputChanged:Connect(function(Pressed)
 					if Dragging and Pressed.UserInputType == Enum.UserInputType.MouseMovement then
 						move(Pressed)
 					end
@@ -676,11 +677,11 @@ function Library.Main(Text, PARENT, keycode)
 				end)
 				return Slider;
 			end
-			function InsideFolder.TextBox(placeholder,callback)
-				local TextBox = Instance.new("TextBox")
-				local UICorner = Instance.new("UICorner")
-				local SearchIcon = Instance.new("ImageLabel")
-				local BoxStroke = Instance.new("UIStroke")
+			function InsideFolder.TextBox(Placeholder, Callback)
+				local TextBox = Instance.new('TextBox')
+				local UICorner = Instance.new('UICorner')
+				local SearchIcon = Instance.new('ImageLabel')
+				local BoxStroke = Instance.new('UIStroke')
 
 				TextBox.Parent = FoldersComponents
 				TextBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
@@ -689,7 +690,7 @@ function Library.Main(Text, PARENT, keycode)
 				TextBox.Size = UDim2.new(0, 300, 0, 35)
 				TextBox.Font = Enum.Font.SourceSansSemibold
 				TextBox.PlaceholderText = placeholder
-				TextBox.Text = ""
+				TextBox.Text = ''
 				TextBox.TextColor3 = Color3.fromRGB(200, 200, 200)
 				TextBox.TextSize = 19.000
 
@@ -702,7 +703,7 @@ function Library.Main(Text, PARENT, keycode)
 				BoxStroke.Thickness = 1
 				BoxStroke.Transparency = 0.95
 
-				SearchIcon.Name = "SearchIcon"
+				SearchIcon.Name = 'SearchIcon'
 				SearchIcon.Parent = TextBox
 				SearchIcon.AnchorPoint = Vector2.new(0, 0.5)
 				SearchIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -710,7 +711,7 @@ function Library.Main(Text, PARENT, keycode)
 				SearchIcon.BorderSizePixel = 0
 				SearchIcon.Position = UDim2.new(0.889999986, 0, 0.5, 0)
 				SearchIcon.Size = UDim2.new(0, 20, 0, 20)
-				SearchIcon.Image = "rbxassetid://3926305904"
+				SearchIcon.Image = 'rbxassetid://3926305904'
 				SearchIcon.ImageColor3 = Color3.fromRGB(165, 165, 165)
 				SearchIcon.ImageRectOffset = Vector2.new(164, 684)
 				SearchIcon.ImageRectSize = Vector2.new(36, 36)
@@ -744,24 +745,24 @@ function Library.Main(Text, PARENT, keycode)
 						TweenService:Create(BoxStroke,TweenInfo.new(0.3),{Transparency = 0.90})
 					end
 					TweenService:Create(TextBox,TweenInfo.new(0.3),{TextColor3 = Color3.fromRGB(255,255,255)})
-					if TextBox.Text ~= "" then
-						TextBox.Text = ""
-						spawn(function() callback(old_Text) end)
+					if TextBox.Text ~= '' then
+						TextBox.Text = ''
+						spawn(function() Callback(old_Text) end)
 					end
 				end)
 
 				return TextBox;
 			end
-			function InsideFolder.Dropdown(placeholder)
-				local Dropdown = Instance.new("TextBox")
-				local DropdownFrame = Instance.new("Frame")
-				local UICorner = Instance.new("UICorner")
-				local SearchIcon = Instance.new("ImageLabel")
-				local BoxStroke = Instance.new("UIStroke")
-				local UICorner_10 = Instance.new("UICorner")
-				local DropFrameStroke = Instance.new("UIStroke")
-				local DropDownListFrame = Instance.new("ScrollingFrame")
-				local UIListLayout = Instance.new("UIListLayout")
+			function InsideFolder.Dropdown(Placeholder)
+				local Dropdown = Instance.new('TextBox')
+				local DropdownFrame = Instance.new('Frame')
+				local UICorner = Instance.new('UICorner')
+				local SearchIcon = Instance.new('ImageLabel')
+				local BoxStroke = Instance.new('UIStroke')
+				local UICorner_10 = Instance.new('UICorner')
+				local DropFrameStroke = Instance.new('UIStroke')
+				local DropDownListFrame = Instance.new('ScrollingFrame')
+				local UIListLayout = Instance.new('UIListLayout')
 
 
 				Dropdown.Parent = DropdownFrame
@@ -772,7 +773,7 @@ function Library.Main(Text, PARENT, keycode)
 				Dropdown.Size = UDim2.new(0, 299, 0, 34)
 				Dropdown.Font = Enum.Font.SourceSansSemibold
 				Dropdown.PlaceholderText = placeholder
-				Dropdown.Text = ""
+				Dropdown.Text = ''
 				Dropdown.TextColor3 = Color3.fromRGB(200, 200, 200)
 				Dropdown.TextSize = 16.000
 
@@ -786,7 +787,7 @@ function Library.Main(Text, PARENT, keycode)
 				BoxStroke.Thickness = 1
 				BoxStroke.Transparency = 0.95
 
-				SearchIcon.Name = "SearchIcon"
+				SearchIcon.Name = 'SearchIcon'
 				SearchIcon.Parent = Dropdown
 				SearchIcon.AnchorPoint = Vector2.new(0, 0.5)
 				SearchIcon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -794,12 +795,12 @@ function Library.Main(Text, PARENT, keycode)
 				SearchIcon.BorderSizePixel = 0
 				SearchIcon.Position = UDim2.new(0.889999986, 0, 0.5, 0)
 				SearchIcon.Size = UDim2.new(0, 20, 0, 20)
-				SearchIcon.Image = "rbxassetid://3926305904"
+				SearchIcon.Image = 'rbxassetid://3926305904'
 				SearchIcon.ImageColor3 = Color3.fromRGB(165, 165, 165)
 				SearchIcon.ImageRectOffset = Vector2.new(4, 44)
 				SearchIcon.ImageRectSize = Vector2.new(36, 36)
 
-				DropDownListFrame.Name = "DropDownListFrame"
+				DropDownListFrame.Name = 'DropDownListFrame'
 				DropDownListFrame.Parent = Dropdown
 				DropDownListFrame.Active = true
 				DropDownListFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -813,7 +814,7 @@ function Library.Main(Text, PARENT, keycode)
 				DropDownListFrame.ScrollBarImageTransparency = 0.7
 
 
-				DropdownFrame.Name = "DropdownFrame"
+				DropdownFrame.Name = 'DropdownFrame'
 				DropdownFrame.Parent = FoldersComponents
 				DropdownFrame.Active = true
 				DropdownFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -832,31 +833,31 @@ function Library.Main(Text, PARENT, keycode)
 
 				DropdownFrame.MouseEnter:Connect(function()
 					if not IsTextBoxActing then
-						DropDownListFrame:TweenSize(UDim2.new(1,0,0,100),"Out","Quad",0.3,true,nil)
-						DropdownFrame:TweenSize(UDim2.new(0,300,0,135),"Out","Quad",0.3,true,nil)
+						DropDownListFrame:TweenSize(UDim2.new(1,0,0,100),'Out','Quad',0.3,true,nil)
+						DropdownFrame:TweenSize(UDim2.new(0,300,0,135),'Out','Quad',0.3,true,nil)
 						TweenService:Create(BoxStroke,TweenInfo.new(0.3),{Transparency = 0.9})
 					end
 				end)
 
 				DropdownFrame.MouseLeave:Connect(function()
 					if not IsTextBoxActing then
-						DropDownListFrame:TweenSize(UDim2.new(1,0,0,0),"Out","Quad",0.3,true,nil)
-						DropdownFrame:TweenSize(UDim2.new(0,300,0,35),"Out","Quad",0.3,true,nil)
+						DropDownListFrame:TweenSize(UDim2.new(1,0,0,0),'Out','Quad',0.3,true,nil)
+						DropdownFrame:TweenSize(UDim2.new(0,300,0,35),'Out','Quad',0.3,true,nil)
 						TweenService:Create(BoxStroke,TweenInfo.new(0.3),{Transparency = 0.95})
 					end
 				end)
 				Dropdown.Focused:Connect(function()
 					IsTextBoxActing = true
-					DropDownListFrame:TweenSize(UDim2.new(1,0,0,100),"Out","Quad",0.3,true,nil)
-					DropdownFrame:TweenSize(UDim2.new(0,300,0,135),"Out","Quad",0.3,true,nil)
+					DropDownListFrame:TweenSize(UDim2.new(1,0,0,100),'Out','Quad',0.3,true,nil)
+					DropdownFrame:TweenSize(UDim2.new(0,300,0,135),'Out','Quad',0.3,true,nil)
 					TweenService:Create(BoxStroke,TweenInfo.new(0.3),{Transparency = 0.85})
 					TweenService:Create(Dropdown,TweenInfo.new(0.3),{TextColor3 = Color3.fromRGB(255,255,255)})
 				end)
 
 				Dropdown.FocusLost:Connect(function()
 					IsTextBoxActing = false
-					DropDownListFrame:TweenSize(UDim2.new(1,0,0,0),"Out","Quad",0.3,true,nil)
-					DropdownFrame:TweenSize(UDim2.new(0,300,0,35),"Out","Quad",0.3,true,nil)
+					DropDownListFrame:TweenSize(UDim2.new(1,0,0,0),'Out','Quad',0.3,true,nil)
+					DropdownFrame:TweenSize(UDim2.new(0,300,0,35),'Out','Quad',0.3,true,nil)
 					if not DropdownFrame.MouseEnter then
 						TweenService:Create(BoxStroke,TweenInfo.new(0.3),{Transparency = 0.95})
 					else
@@ -866,9 +867,9 @@ function Library.Main(Text, PARENT, keycode)
 				end)
 
 				Dropdown.Changed:Connect(function(Property)
-					if Property == "Text" then
+					if Property == 'Text' then
 						for i,v in next, DropDownListFrame:GetChildren() do
-							if v:IsA("TextButton") then
+							if v:IsA('TextButton') then
 								if v.Name:lower():find(Dropdown.Text:lower()) then
 									v.Visible = true
 								else
@@ -880,8 +881,8 @@ function Library.Main(Text, PARENT, keycode)
 				end)
 
 				local InsideDropdown = {}
-				function InsideDropdown.Choice(Text,callback)
-					local SelectButton = Instance.new("TextButton")
+				function InsideDropdown.Choice(Text, Callback)
+					local SelectButton = Instance.new('TextButton')
 
 					SelectButton.Name = Text
 					SelectButton.Parent = DropDownListFrame
@@ -894,7 +895,7 @@ function Library.Main(Text, PARENT, keycode)
 					SelectButton.Text = Text
 					SelectButton.MouseButton1Click:Connect(function()
 						Dropdown.Text = ''
-						callback()
+						Callback()
 					end)
 
 					SelectButton.MouseEnter:Connect(function()
