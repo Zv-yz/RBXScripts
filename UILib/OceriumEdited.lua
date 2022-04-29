@@ -904,6 +904,7 @@ function Library.Main(Text, PARENT, keycode)
 					SelectButton.MouseLeave:Connect(function()
 						TweenService:Create(SelectButton,TweenInfo.new(0.3),{BackgroundTransparency = 1}):Play()
 					end)
+					return SelectButton
 				end
 				return InsideDropdown,Dropdown;
 			end
