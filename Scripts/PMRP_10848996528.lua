@@ -1,3 +1,5 @@
+--> Zv_yz#0847
+--> Place Link: https://www.roblox.com/games/10848996528/POLICIA-MILITAR-RP
 _G.Enabled = true
 -- << Variables | Services >> --
 local Proximitys = { From = {}, Receive = {} }
