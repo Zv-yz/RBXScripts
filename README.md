@@ -19,6 +19,24 @@ Se você quiser dar sugestão ou reportar um bug/patched script [clique aqui!](h
 loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/RBXScripts/master/Scripts/CidadeAlta.lua'))()
 ```
 </details>
+<details>
+<summary>Viethin Changer</summary>
+
+# Funções:
+* `Mudar values que contém em jogo.`
+
+# Script:
+```lua
+local Main = loadstring(game:HttpGet('https://raw.githubusercontent.com/Zv-yz/RBXScripts/master/Scripts/ViethinChange.lua'))()
+local Config = {
+    BoolValue = true; -- Can be true or false
+    StringValue = 'Hey, this is a example!'; -- The string
+    NumberValue = 69; -- Number
+    IntValue = 69; -- Number
+}
+Main:Change(Config)
+```
+</details>
 
 ---
 
