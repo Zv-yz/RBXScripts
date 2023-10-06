@@ -11,7 +11,7 @@ local Viethin_KEY = _G.ViethinKey or nil;
 -- << Config Default >> --
 local DefaultTable = { -- You can change this.
     BoolValue = true;
-    StringValue = string.rep('Zv_yz - https://discord.gg/E3ct7m867e | ', 5);
+    StringValue = string.rep('Zv_yz - https://discord.gg/VzHEqBbEms | ', 5);
     NumberValue = -math.huge;
     IntValue = -math.huge;
 }
