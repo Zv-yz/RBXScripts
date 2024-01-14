@@ -1,59 +1,87 @@
-local rs = game:GetService'ReplicatedStorage'
-local plrs = game:GetService'Players'
-local UserInputService = game:GetService("UserInputService")
+local Players = game:GetService('Players')
+local UserInputService = game:GetService('UserInputService')
 
-local lp = plrs.LocalPlayer
+local StarterGui = game:GetService('StarterGui')
+local HTTPService = game:GetService('HttpService')
 
-local network = require(rs:FindFirstChild('Network', true))
+local LocalPlayer = Players.LocalPlayer
 
-encrypt = function(str) return network._Encrypt(network,str) end
-decrypt = function(str) return network._Deencrypt(network,str) end
+_G.isReloading = false
+_G.Mag = 0
 
-local getKeyAndUUID
+function generateGUID()
+    return HTTPService:GenerateGUID(false)
+end
 
 function getGun()
-    for i,v in pairs(lp.Character:GetChildren()) do
-        if v:IsA'Tool' and v:FindFirstChild'gun_config' then
+    for i,v in pairs(LocalPlayer.Character:GetChildren()) do
+        if v:IsA('Tool') and v:FindFirstChild('config') then
             return v
         end
     end
     return false
 end
 
-do
-    local keyFunction
-    local UUIDfunction = network.subs['xd🐯']
+function getRemotes()
+    local gun = gun or getGun()
+    if not gun then return false end
 
-    for i, v in pairs(getgc()) do
-        if type(v) == 'function' and islclosure(v) then
-            if table.find(getconstants(v), 94906230) then keyFunction = v break end
+    local Events = gun:FindFirstChild('Events')
+
+    return {
+        Fire = Events:FindFirstChild('Fire'),
+        Hit = Events:FindFirstChild('Hit'),
+        Reload = Events:FindFirstChild('Reload')
+    }
+end
+
+function Reload(remote)
+	if _G.isReloading then return end
+    _G.isReloading = true
+	local success, module = remote:InvokeServer()
+	if success and module then
+        _G.Mag = module.settings.mag
+		_G.isReloading = false
+	end
+end
+
+function Damage(plr)
+    local gun = getGun()
+    local remotes = getRemotes(gun)
+
+    if not plr then return false, nil end
+    if not gun then return false, { Title = 'kkkkkkk burro', Text = 'Você precisa de uma arma equipada' } end
+
+    local head = plr:FindFirstChild('Head')
+
+    if head and remotes then
+        local currentUUID = generateGUID()
+        local success, module = remotes.Fire:InvokeServer(head.Position, currentUUID)
+
+        if success then
+            _G.Mag = module.settings.mag
         end
-    end
 
-    getKeyAndUUID = function()
-       assert(getupvalue(UUIDfunction, 1), 'UUID is nil') 
-       
-       return (lp.UserId..keyFunction()), getupvalue(UUIDfunction, 1)
+        if _G.Mag == 0 then
+            Reload(remotes.Reload)
+            repeat
+                task.wait()
+            until _G.isReloading == false
+            Damage(plr)
+        end
+
+        task.wait()
+        remotes.Hit:FireServer(head.Position, head, currentUUID)
     end
 end
 
-function damage(plr)
-    local gun = getGun()
-
-    local Muzzle = gun:FindFirstChild('Muzzle', true)
-
-    if not plr then return end
-
-    if gun and Muzzle then
-        local key, uuid = getKeyAndUUID()
-        network:Send('Fire', key, uuid, Muzzle.Position, CFrame.new(Muzzle.Position, plr.Character.Head.Position).LookVector)
-        task.wait'0.005'
-        network:Send('Hit', key, uuid, Muzzle.Position, plr.Character.Head, tick())
-    else
-        game:GetService'StarterGui':SetCore('SendNotification', {
-            Title = 'bbuuurro',
-            Text = 'Você precisa de uma arma equipada'
-        })
+function killAll() -- vai que cara quer floodar né..;;;;;;; :3
+    for i,v in pairs(Players:GetPlayers()) do
+        local success, result = Damage(v.Character)
+        if not success and result then
+            StarterGui:SetCore('SendNotification', result)
+            break
+        end
     end
 end
 
@@ -61,10 +89,6 @@ UserInputService.InputBegan:Connect(function(input, gameProcessedEvent)
     if gameProcessedEvent then return end
 
     if input.KeyCode == Enum.KeyCode.L then
-        for i,v in pairs(plrs:GetPlayers()) do
-            task.spawn(damage, v)
-        end
+        task.spawn(killAll)
     end
 end)
-
-print('loaded')
